@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — CampusHire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">CH</span> CampusHire</a>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="companies.html">Drives</a>
+      <a href="student-dashboard.html">Student Dashboard</a>
+      <a href="admin-dashboard.html" class="active">Admin Dashboard</a>
+    </nav>
+    <div class="nav-user" id="navUser"></div>
+  </div>
+</header>
+
+<main class="container mt-24" style="margin-bottom:50px;">
+  <div class="section-title"><span class="dot"></span>Admin Dashboard</div>
+
+  <div id="adminStats" class="stats-grid" style="margin-top:0; margin-bottom:24px;"></div>
+
+  <div class="admin-toolbar">
+    <button class="tab-btn active" data-tab="applicants">Applicants</button>
+    <button class="tab-btn" data-tab="drives">Manage Drives</button>
+    <button class="tab-btn" data-tab="addDrive">+ Add New Drive</button>
+  </div>
+
+  <div class="tab-panel active" id="panel-applicants">
+    <div class="card" style="overflow-x:auto; padding: 4px;" id="applicantsTableWrap"></div>
+  </div>
+
+  <div class="tab-panel" id="panel-drives">
+    <div class="card" style="overflow-x:auto; padding: 4px;" id="drivesTableWrap"></div>
+  </div>
+
+  <div class="tab-panel" id="panel-addDrive">
+    <div class="card" style="padding:24px; max-width:640px;">
+      <form id="addDriveForm">
+        <div class="field-row">
+          <div class="field"><label>Company Name</label><input type="text" id="newName" required></div>
+          <div class="field"><label>Role</label><input type="text" id="newRole" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Package (LPA)</label><input type="number" step="0.1" id="newPackage" required></div>
+          <div class="field"><label>Min CGPA</label><input type="number" step="0.1" id="newCgpa" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Deadline</label><input type="date" id="newDeadline" required></div>
+          <div class="field"><label>Location</label><input type="text" id="newLocation" required></div>
+        </div>
+        <div class="field">
+          <label>Eligible Branches (hold Ctrl/Cmd to select multiple)</label>
+          <select id="newBranches" multiple size="5" required>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+          </select>
+        </div>
+        <div class="field"><label>Description</label><textarea id="newDesc" rows="3" required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">Add Drive</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">CampusHire Placement Management System — demo project</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>

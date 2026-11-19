@@ -1,0 +1,25 @@
+.filter-bar{
+  padding: 20px; display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 16px;
+}
+@media (max-width: 900px){ .filter-bar{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px){ .filter-bar{ grid-template-columns: 1fr; } }
+
+.company-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 760px){ .company-grid{ grid-template-columns: 1fr; } }
+
+.company-card{
+  padding: 20px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.company-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.company-card-top{ display: flex; gap: 12px; align-items: center; }
+.company-card-name{ font-family: var(--font-heading); font-weight: 700; font-size: 16px; }
+.company-card-role{ font-size: 13px; color: var(--muted); }
+.company-card-tags{ display: flex; flex-wrap: wrap; gap: 6px; }
+.tag{
+  font-family: var(--font-mono); font-size: 11px; padding: 3px 9px; border-radius: 20px;
+  background: var(--bg); border: 1px solid var(--line); color: var(--muted);
+}
+.company-card-bottom{ display: flex; justify-content: space-between; align-items: center; }
+.company-card-pkg{ font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 15px; }

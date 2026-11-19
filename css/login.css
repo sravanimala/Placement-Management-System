@@ -1,0 +1,16 @@
+.login-main{
+  min-height: 70vh; display: flex; align-items: center; justify-content: center;
+  padding: 60px 20px;
+}
+.login-card{ width: 100%; max-width: 460px; padding: 32px; }
+.role-options{ display: flex; flex-direction: column; gap: 14px; }
+.role-option{
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--bg); cursor: pointer; text-align: left;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.role-option:hover{ border-color: var(--indigo); transform: translateY(-2px); background: var(--surface); }
+.role-icon{ font-size: 26px; }
+.role-name{ font-weight: 700; font-family: var(--font-heading); font-size: 15px; }
+.role-desc{ font-size: 12.5px; color: var(--muted); margin-top: 3px; }

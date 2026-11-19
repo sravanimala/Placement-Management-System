@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drives — CampusHire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/companies.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">CH</span> CampusHire</a>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="companies.html" class="active">Drives</a>
+      <a href="student-dashboard.html">Student Dashboard</a>
+      <a href="admin-dashboard.html">Admin Dashboard</a>
+    </nav>
+    <div class="nav-user" id="navUser"></div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Placement Drives</h1>
+      <p>Filter by branch eligibility and package to find drives that match your profile.</p>
+    </div>
+  </section>
+
+  <section class="container mt-24" style="margin-bottom:50px;">
+    <div class="filter-bar card">
+      <div class="field" style="margin-bottom:0;">
+        <label>Search</label>
+        <input type="text" id="fSearch" placeholder="Company or role...">
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Branch</label>
+        <select id="fBranch">
+          <option value="">All branches</option>
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="MECH">MECH</option>
+        </select>
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Min. Package (LPA)</label>
+        <select id="fPackage">
+          <option value="0">Any</option>
+          <option value="4">4+</option>
+          <option value="6">6+</option>
+          <option value="8">8+</option>
+          <option value="10">10+</option>
+        </select>
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Status</label>
+        <select id="fStatus">
+          <option value="">All</option>
+          <option value="open">Open</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Sort by</label>
+        <select id="fSort">
+          <option value="deadline">Deadline (soonest)</option>
+          <option value="package-desc">Package (high to low)</option>
+          <option value="package-asc">Package (low to high)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex-between" style="margin: 20px 0 6px;">
+      <span class="text-muted" id="resultCount" style="font-size:13px;"></span>
+    </div>
+
+    <div class="company-grid" id="companyGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">CampusHire Placement Management System — demo project</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/companies.js"></script>
+</body>
+</html>

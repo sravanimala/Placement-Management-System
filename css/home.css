@@ -1,0 +1,38 @@
+.stats-grid{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  margin-top: -46px; position: relative; z-index: 2;
+}
+@media (max-width: 800px){ .stats-grid{ grid-template-columns: repeat(2, 1fr); } }
+.stat-card{
+  background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: 20px; border: 1px solid var(--line);
+}
+.stat-value{ font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--navy); }
+.stat-label{ font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+
+.upcoming-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 900px){ .upcoming-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px){ .upcoming-grid{ grid-template-columns: 1fr; } }
+
+.mini-card{
+  padding: 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.mini-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.mini-card-top{ display: flex; align-items: center; gap: 10px; }
+.logo-chip{
+  width: 40px; height: 40px; border-radius: 8px; background: var(--navy);
+  color: var(--amber); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading); font-weight: 700; font-size: 14px; flex-shrink: 0;
+}
+.mini-card-name{ font-weight: 600; font-size: 15px; }
+.mini-card-role{ font-size: 12.5px; color: var(--muted); }
+.mini-card-meta{ display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; }
+.mini-card-pkg{ font-family: var(--font-mono); color: var(--navy); font-weight: 600; }
+
+.announce-list{ display: flex; flex-direction: column; gap: 10px; }
+.announce-item{
+  padding: 14px 18px; border-radius: 8px; background: var(--surface);
+  border: 1px solid var(--line); font-size: 13.5px; display: flex; gap: 12px; align-items: flex-start;
+}
+.announce-item .dt{ font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; padding-top: 2px; }

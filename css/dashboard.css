@@ -1,0 +1,49 @@
+.dash-grid{ display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 860px){ .dash-grid{ grid-template-columns: 1fr; } }
+
+.profile-card{ padding: 22px; text-align: center; }
+.avatar{
+  width: 64px; height: 64px; border-radius: 50%; background: var(--navy); color: var(--amber);
+  display: flex; align-items: center; justify-content: center; font-family: var(--font-heading);
+  font-weight: 800; font-size: 22px; margin: 0 auto 14px;
+}
+.profile-name{ font-family: var(--font-heading); font-weight: 700; font-size: 17px; }
+.profile-meta{ font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.profile-stats{ display:flex; justify-content:space-around; margin-top:18px; padding-top:16px; border-top:1px solid var(--line); }
+.profile-stat b{ display:block; font-family: var(--font-heading); font-size: 18px; }
+.profile-stat span{ font-size: 11px; color: var(--muted); }
+
+.checklist-card{ padding: 20px; margin-top: 18px; }
+.checklist-item{
+  display: flex; align-items: center; gap: 10px; padding: 9px 0;
+  border-bottom: 1px solid var(--line); font-size: 13.5px; cursor: pointer;
+}
+.checklist-item:last-child{ border-bottom: none; }
+.checklist-item input{ width: 16px; height: 16px; accent-color: var(--indigo); cursor: pointer; }
+.checklist-item.done span{ text-decoration: line-through; color: var(--muted); }
+.progress-track{ height: 6px; border-radius: 4px; background: var(--line); overflow: hidden; margin-top: 12px; }
+.progress-fill{ height: 100%; background: var(--amber); transition: width 0.3s; }
+
+.app-table{ width: 100%; border-collapse: collapse; }
+.app-table th{
+  text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--muted); padding: 10px 14px; border-bottom: 1px solid var(--line);
+}
+.app-table td{ padding: 14px; border-bottom: 1px solid var(--line); font-size: 13.5px; vertical-align: middle; }
+.app-table tr:last-child td{ border-bottom: none; }
+.app-company{ display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.app-company .logo-chip{ width: 32px; height: 32px; font-size: 11px; border-radius: 7px; }
+
+.admin-toolbar{ display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.tab-btn{
+  padding: 9px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+}
+.tab-btn.active{ background: var(--navy); color: #fff; border-color: var(--navy); }
+.tab-panel{ display: none; }
+.tab-panel.active{ display: block; }
+
+.status-select{
+  padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line); font-size: 12.5px;
+  background: var(--surface); font-family: var(--font-mono);
+}
